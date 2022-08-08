@@ -23,38 +23,91 @@ function showparticipantes() {
     p8.style.display = "none";
     p9.style.display = "none";
     p10.style.display = "none";
+
+    p3generado.style.display = "none";
+    p4generado.style.display = "none";
+    p5generado.style.display = "none";
+    p6generado.style.display = "none";
+    p7generado.style.display = "none";
+    p8generado.style.display = "none";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 3) {
     p3.style.display = "block";
+    p4.style.display = "none";
+    p5.style.display = "none";
+    p6.style.display = "none";
+    p7.style.display = "none";
+    p8.style.display = "none";
+    p9.style.display = "none";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
+    p4generado.style.display = "none";
+    p5generado.style.display = "none";
+    p6generado.style.display = "none";
+    p7generado.style.display = "none";
+    p8generado.style.display = "none";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 4) {
     p3.style.display = "block";
     p4.style.display = "block";
+    p5.style.display = "none";
+    p6.style.display = "none";
+    p7.style.display = "none";
+    p8.style.display = "none";
+    p9.style.display = "none";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
     p4generado.style.display = "block";
+    p5generado.style.display = "none";
+    p6generado.style.display = "none";
+    p7generado.style.display = "none";
+    p8generado.style.display = "none";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 5) {
     p3.style.display = "block";
     p4.style.display = "block";
     p5.style.display = "block";
+    p6.style.display = "none";
+    p7.style.display = "none";
+    p8.style.display = "none";
+    p9.style.display = "none";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
     p4generado.style.display = "block";
     p5generado.style.display = "block";
+    p6generado.style.display = "none";
+    p7generado.style.display = "none";
+    p8generado.style.display = "none";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 6) {
     p3.style.display = "block";
     p4.style.display = "block";
     p5.style.display = "block";
     p6.style.display = "block";
+    p7.style.display = "none";
+    p8.style.display = "none";
+    p9.style.display = "none";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
     p4generado.style.display = "block";
     p5generado.style.display = "block";
     p6generado.style.display = "block";
+    p7generado.style.display = "none";
+    p8generado.style.display = "none";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 7) {
     p3.style.display = "block";
@@ -62,12 +115,18 @@ function showparticipantes() {
     p5.style.display = "block";
     p6.style.display = "block";
     p7.style.display = "block";
+    p8.style.display = "none";
+    p9.style.display = "none";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
     p4generado.style.display = "block";
     p5generado.style.display = "block";
     p6generado.style.display = "block";
     p7generado.style.display = "block";
+    p8generado.style.display = "none";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 8) {
     p3.style.display = "block";
@@ -76,6 +135,8 @@ function showparticipantes() {
     p6.style.display = "block";
     p7.style.display = "block";
     p8.style.display = "block";
+    p9.style.display = "none";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
     p4generado.style.display = "block";
@@ -83,6 +144,8 @@ function showparticipantes() {
     p6generado.style.display = "block";
     p7generado.style.display = "block";
     p8generado.style.display = "block";
+    p9generado.style.display = "none";
+    p10generado.style.display = "none";
   }
   if (participantes == 9) {
     p3.style.display = "block";
@@ -92,6 +155,7 @@ function showparticipantes() {
     p7.style.display = "block";
     p8.style.display = "block";
     p9.style.display = "block";
+    p10.style.display = "none";
 
     p3generado.style.display = "block";
     p4generado.style.display = "block";
@@ -100,6 +164,7 @@ function showparticipantes() {
     p7generado.style.display = "block";
     p8generado.style.display = "block";
     p9generado.style.display = "block";
+    p10generado.style.display = "none";
   }
   if (participantes == 10) {
     p3.style.display = "block";
