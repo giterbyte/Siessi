@@ -1,0 +1,838 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.fontOswald {
+  font-family: "Oswald", sans-serif;
+}
+.fontRoboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/*nav*/
+.nav {
+  position: absolute;
+  top: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  margin: auto;
+  z-index: 10;
+}
+.nav a {
+  text-decoration: none;
+  padding: 5px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6em;
+  color: white !important;
+}
+.nav a:hover {
+  color: blueviolet !important;
+}
+#navbarNav {
+  color: white !important;
+}
+
+/*----------index----------------*/
+#slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: SlideAnimation 32s infinite 0s;
+  overflow: hidden;
+}
+.slide:nth-child(2) {
+  animation-delay: 16s;
+}
+.bg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url(images/siessi1.jpg) no-repeat center center;
+  background-size: cover;
+  animation: BgAnimation 32s infinite 0s;
+}
+.slide:nth-child(2) .bg {
+  background-image: url(images/siessi3.jpg);
+  animation: BgAnimation2 32s infinite 0s;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url();
+}
+.contentWrapper {
+  opacity: 0;
+  top: 50%;
+  left: 45%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: TitleAnimation 32s infinite 0s;
+  z-index: 2;
+}
+.slide:nth-child(2) .contentWrapper {
+  animation-delay: 16s;
+}
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 8em;
+  font-weight: normal;
+  color: whitesmoke;
+  white-space: nowrap;
+  letter-spacing: -0.1rem;
+}
+#text {
+  font-size: 1.4em;
+  position: relative;
+}
+#text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#text span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  color: white;
+}
+
+@keyframes SlideAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes BgAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-45%, -55%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes BgAnimation2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-55%, -45%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes TitleAnimation {
+  0% {
+    top: 50%;
+    left: 45%;
+    opacity: 0;
+  }
+  5% {
+    top: 50%;
+    left: 45%;
+    opacity: 0;
+  }
+  20% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  45% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  50% {
+    top: 55%;
+    left: 50%;
+    opacity: 0;
+  }
+  100% {
+    top: 55%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+/*formulario*/
+.contenedor_form {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: grey;
+}
+.formulario {
+  position: relative;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.instrucciones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.cuerpo_instrucciones {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  padding: 20px;
+  z-index: 10;
+}
+.cuerpo_instrucciones h5 {
+  text-align: center;
+}
+.cuerpo_instrucciones span {
+  text-align: justify;
+}
+.instruccion_button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+}
+.form_line {
+  display: flex;
+  width: 100%;
+}
+.icon i {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 6px;
+  font-size: 20px;
+}
+#lugarevento {
+  width: 65%;
+  margin-right: 10px;
+}
+#localidadevento {
+  width: 35%;
+}
+#participan {
+  width: 42%;
+  margin-right: 10px;
+}
+#participan select {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+#fechaevento {
+  width: 33%;
+  margin-right: 10px;
+  color: blue !important;
+}
+#fechaevento input {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+#horaevento {
+  width: 25%;
+}
+#horaevento input {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+#p3,
+#p4,
+#p5,
+#p6,
+#p7,
+#p8,
+#p9,
+#p10 {
+  display: none;
+}
+#p3generado,
+#p4generado,
+#p5generado,
+#p6generado,
+#p7generado,
+#p8generado,
+#p9generado,
+#p10generado {
+  display: none;
+}
+#nombrep1,
+#nombrep2,
+#nombrep3,
+#nombrep4,
+#nombrep5,
+#nombrep6,
+#nombrep7,
+#nombrep8,
+#nombrep9,
+#nombrep10 {
+  width: 30%;
+  margin-right: 10px;
+}
+#apellidosp1,
+#apellidosp2,
+#apellidosp3,
+#apellidosp4,
+#apellidosp5,
+#apellidosp6,
+#apellidosp7,
+#apellidosp8,
+#apellidosp9,
+#apellidosp10 {
+  width: 70%;
+}
+#dnip1,
+#dnip2,
+#dnip3,
+#dnip4,
+#dnip5,
+#dnip6,
+#dnip7,
+#dnip8,
+#dnip9,
+#dnip10 {
+  width: 50%;
+  margin-right: 15px;
+}
+#fechap1,
+#fechap2,
+#fechap3,
+#fechap4,
+#fechap5,
+#fechap6,
+#fechap7,
+#fechap8,
+#fechap9,
+#fechap10 {
+  width: 50%;
+}
+#fechap1 input,
+#fechap2 input,
+#fechap3 input,
+#fechap4 input,
+#fechap5 input,
+#fechap6 input,
+#fechap7 input,
+#fechap8 input,
+#fechap9 input,
+#fechap10 input {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+#adjuntar {
+  background-color: white;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.formbutton {
+  position: relative;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.link {
+  text-decoration: none;
+  color: red;
+}
+.link:hover {
+  color: red;
+}
+/*consetimiento*/
+.contenedor_consentimiento {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: beige;
+  display: none;
+}
+.textgenerado {
+  width: 90%;
+  margin: auto;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+#lugareventogenerado,
+#localidadeventogenerado,
+#nombrep1generado,
+#nombrep2generado,
+#apellidosp1generado,
+#apellidosp2generado,
+#dnip1generado,
+#dnip2generado,
+#fechap1generado,
+#fechap1generado {
+  text-transform: uppercase;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+}
+#print {
+  position: relative;
+  width: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 50px;
+}
+/*-----------------marcolegal-----------*/
+.header_marco {
+  width: 100%;
+  height: 23vh;
+  background-image: url(images/siessi3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.4);
+}
+#marcolegal {
+  width: 72%;
+  margin: auto;
+  border: none;
+}
+.portada_marco {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 4fr 1fr;
+}
+.portada_cuerpo {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 4fr;
+}
+.publi1 {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.publi2 {
+  height: 58vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: justify;
+}
+.publi2 a {
+  text-decoration: none;
+}
+.membresia {
+  width: 80%;
+  margin: auto;
+}
+.membresia p:first-child {
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 15px;
+}
+.membresia p:nth-child(2) {
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: bold;
+}
+.selee {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.number {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: blue;
+  margin-right: 5px;
+}
+.textolee {
+  font-size: 0.8rem;
+}
+.minutos {
+  color: blue;
+}
+
+/*-----------legal----------------*/
+#legal_container {
+  height: 100vh;
+  background-image: url(images/fondoportada2.jpg);
+  background-size: cover;
+}
+.legal {
+  position: relative;
+  width: 38%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10px gray, 0 15px 50px;
+}
+.legal img {
+  width: 100%;
+  height: auto;
+}
+.boton {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 15px 50px;
+  border-radius: 50%;
+}
+.boton i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: white;
+}
+.boton i:hover {
+  font-size: 1.9em;
+}
+
+/*-------------------politica------------*/
+.contenedor_politica {
+  width: 80%;
+  margin: auto;
+}
+/*-----------------mediaquery---------------*/
+@media (max-width: 567.98px) {
+  /*nav*/
+  .nav {
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    transform: translateX(0%);
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .nav-link {
+    font-size: 1em !important;
+  }
+  /*index*/
+  .bg {
+    background-position: right;
+  }
+  .title {
+    font-size: 4em;
+  }
+  #text {
+    font-size: 0.8em;
+  }
+  /*formulario*/
+  .cuerpo_instrucciones {
+    width: 94%;
+    font-size: 0.7em;
+  }
+  .formulario {
+    font-size: 0.9em;
+    width: 100%;
+    height: auto;
+  }
+  .formbutton {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .form-group input {
+    font-size: 0.8em;
+  }
+  .form-group select {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  /*consentimiento*/
+  .contenedor_consentimiento {
+    width: 100%;
+  }
+  .instruccion_button {
+    font-size: 0.7em;
+    width: 80%;
+  }
+  .textgenerado {
+    font-size: 0.9rem;
+  }
+  #print {
+    width: 60%;
+  }
+  /*marco*/
+  .header_marco {
+    height: 18vh;
+    margin-bottom: 20px;
+  }
+  #marcolegal {
+    width: 94%;
+  }
+  #marcolegal h1 {
+    font-size: 1.2rem;
+  }
+  #marcolegal p {
+    font-size: 0.8rem;
+  }
+  .portada_marco {
+    grid-template-columns: 1fr;
+  }
+  .publi1 {
+    display: none;
+  }
+  .portada_cuerpo {
+    grid-template-columns: 1fr;
+  }
+  .publi2 {
+    height: auto;
+    padding: 3px !important;
+  }
+  .cuerpo_marco h4 {
+    font-size: 1.2rem;
+  }
+  .cuerpo_marco strong {
+    font-size: 1rem !important;
+  }
+  /*legal*/
+  .legal {
+    width: 70% !important;
+  }
+  .boton {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .boton i {
+    font-size: 0.9em !important;
+  }
+  /*politica*/
+  .contenedor_politica {
+    width: 94%;
+  }
+}
+@media (min-width: 568px) and (max-width: 767.98px) {
+  .nav {
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    transform: translateX(0%);
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .nav-link {
+    font-size: 0.9em !important;
+  }
+  .bg {
+    background-position: right;
+  }
+  .title {
+    font-size: 5em;
+  }
+  #text {
+    font-size: 1em;
+  }
+  .cuerpo_instrucciones {
+    width: 86%;
+    font-size: 14px;
+    top: 50%;
+  }
+  .formulario {
+    font-size: 0.9em;
+    width: 100%;
+    height: 100%;
+  }
+  .formbutton {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .form-group input {
+    font-size: 0.8em;
+  }
+  .form-group select {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  /*consentimiento*/
+  .contenedor_consentimiento {
+    width: 100%;
+  }
+  .instruccion_button {
+    font-size: 0.7em;
+    width: 80%;
+  }
+  .textgenerado {
+    font-size: 0.9rem;
+  }
+  #print {
+    width: 60%;
+  }
+  /*marco*/
+  .header_marco {
+    height: 25vh;
+    margin-bottom: 20px;
+  }
+  #marcolegal {
+    width: 94%;
+  }
+  #marcolegal h1 {
+    font-size: 1.2rem;
+  }
+  #marcolegal p {
+    font-size: 0.8rem;
+  }
+  .portada_marco {
+    grid-template-columns: 1fr;
+  }
+  .publi1 {
+    display: none;
+  }
+  .portada_cuerpo {
+    grid-template-columns: 1fr;
+  }
+  .publi2 {
+    height: auto;
+    padding: 3px !important;
+  }
+  .cuerpo_marco h4 {
+    font-size: 1.2rem;
+  }
+  .cuerpo_marco strong {
+    font-size: 1rem !important;
+  }
+  /*legal*/
+  .legal {
+    width: 30% !important;
+  }
+  .boton {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .boton i {
+    font-size: 0.9em !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 997.98px) {
+  .navbar-nav {
+    font-size: 1.6em;
+  }
+  .nav-link {
+    font-size: 0.9em !important;
+  }
+  .title {
+    font-size: 8em;
+  }
+  #text {
+    font-size: 1.8em;
+  }
+  .formulario {
+    font-size: 0.9em;
+    width: 100%;
+    height: 100vh;
+  }
+  .formbutton {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  /*consentimiento*/
+  .contenedor_consentimiento {
+    width: 100%;
+  }
+  .instruccion_button {
+    font-size: 0.7em;
+    width: 80%;
+  }
+  .textgenerado {
+    font-size: 1.3rem;
+  }
+  #print {
+    width: 50%;
+  }
+  /*marco*/
+  #marcolegal {
+    width: 88%;
+  }
+  .portada_cuerpo {
+    grid-template-columns: 1fr;
+  }
+  .publi2 {
+    height: auto;
+  }
+  /*legal*/
+  .legal {
+    width: 70% !important;
+  }
+  .boton {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .boton i {
+    font-size: 1.2em !important;
+  }
+}
+@media (min-width: 998px) and (max-width: 1199.98px) {
+  .formbutton {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  /*marco*/
+  #marcolegal {
+    width: 80%;
+  }
+  .portada_cuerpo {
+    grid-template-columns: 1fr;
+  }
+  .publi2 {
+    height: auto;
+  }
+  /*legal*/
+  .header_marco {
+    height: 23vh;
+    margin-bottom: 40px;
+  }
+  .legal {
+    width: 30% !important;
+  }
+  .boton {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .boton i {
+    font-size: 1.2em !important;
+  }
+}

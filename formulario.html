@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de consentimiento</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo/s3.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="contenedor_form" id="contenedorform">
+      <div class="instrucciones" id="instrucciones">
+      <div class="cuerpo_instrucciones">
+        <h5>Instrucciones para cumplimentar el formulario</h5>
+        <br>
+        <span>Con este formulario podrás generar un CONSENTIMIENTO en formato PDF y descargarlo en tu 
+          dispositivo u ordenador de forma sencilla y grabar dicho CONSENTIMIENTO. <br><br>
+          Para ello, sigue estas instrucciones: <br><br>
+          <ol>
+            <li>Introduce los datos del lugar, hora y fecha del encuentro y nº de participantes. Todos los campos son obligatorios. Asegúrate de que sean correctos.</li>
+            <li>Introduce los datos personales de cada uno de los participantes. Asegúrate de que los datos sean correctos.</li>
+            <li>A continuación estableced los límites y prácticas sexuales aceptadas y consensuadas por todos. 
+              Marca sólo las casillas que hayais consensuado y deja las otras sin marcar. </li>
+            <li>Lee la Política de Privacidad y marca la casilla "Acepto la Política de privacidad".</li>
+            <li>Pulsa el botón "Crear consentimiento". Aparecerá el documento tal y como se va a generar. Repasa todos los datos.</li>
+            <li>Después pulsa al final de la página en "generar PDF".</li>
+            <li>Se descargará a la carpeta "descargas" de tu dispositivo el consentimiento.pdf generado.</li>
+            <li>Desde este dispositivo se enviará por cualquier medio electrónico la copia del archivo a cada uno de los participantes</li>
+          </ol>
+        </span>
+        <button class="instruccion_button btn btn-outline-secondary" id="instruccion">
+          ¡Muy bien, vamos!
+        </button>
+        <br><br>
+      </div>
+      </div>
+      <div class="formulario" id="formulario">
+        <div class="card-body">
+          <form action="#" method="post" id="form">
+          <div id="lugarfecha">
+            <p class="titulo text-center fs-5 mt-4">Formulario de consentimiento</p>
+            <p class="titulo mt-4">Lugar y fecha del evento</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="lugarevento">
+                <input
+                  type="text"
+                  name="lugarevento"
+                  class="form-control"
+                  placeholder="Lugar/Dirección/Establecimiento"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="localidadevento">
+                <input
+                  type="text"
+                  name="localidadevento"
+                  class="form-control"
+                  placeholder="Localidad"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="participan">
+                <select class="form-select" id="participantes" name="participantes">
+                  <option selected>Nº personas</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="form-group mb-3" id="fechaevento">
+                <input
+                  type="date"
+                  name="fechaevento"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="horaevento">
+                <input
+                  type="time"
+                  name="horaevento"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p1">
+            <p class="titulo">Participante 1</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep1">
+                <input
+                  type="text"
+                  name="nombrep1"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp1">
+                <input
+                  type="text"
+                  name="apellidosp1"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip1">
+                <input
+                  type="text"
+                  name="dnip1"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap1">
+                <input
+                  type="date"
+                  name="fechap1"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p2">
+            <p class="titulo">Participante 2</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep2">
+                <input
+                  type="text"
+                  name="nombrep2"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp2">
+                <input
+                  type="text"
+                  name="apellidosp2"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip2">
+                <input
+                  type="text"
+                  name="dnip2"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap2">
+                <input
+                  type="date"
+                  name="fechap2"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p3">
+            <p class="titulo">Participante 3</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep3">
+                <input
+                  type="text"
+                  name="nombrep3"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp3">
+                <input
+                  type="text"
+                  name="apellidosp3"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip3">
+                <input
+                  type="text"
+                  name="dnip3"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap3">
+                <input
+                  type="date"
+                  name="fechap3"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p4">
+            <p class="titulo">Participante 4</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep4">
+                <input
+                  type="text"
+                  name="nombrep4"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp4">
+                <input
+                  type="text"
+                  name="apellidosp4"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip4">
+                <input
+                  type="text"
+                  name="dnip4"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap4">
+                <input
+                  type="date"
+                  name="fechap4"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p5">
+            <p class="titulo">Participante 5</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep5">
+                <input
+                  type="text"
+                  name="nombrep5"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp5">
+                <input
+                  type="text"
+                  name="apellidosp5"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip5">
+                <input
+                  type="text"
+                  name="dnip5"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap5">
+                <input
+                  type="date"
+                  name="fechap5"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p6">
+            <p class="titulo">Participante 6</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep6">
+                <input
+                  type="text"
+                  name="nombrep6"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp6">
+                <input
+                  type="text"
+                  name="apellidosp6"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip6">
+                <input
+                  type="text"
+                  name="dnip6"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap6">
+                <input
+                  type="date"
+                  name="fechap6"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p7">
+            <p class="titulo">Participante 7</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep7">
+                <input
+                  type="text"
+                  name="nombrep7"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp7">
+                <input
+                  type="text"
+                  name="apellidosp7"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip7">
+                <input
+                  type="text"
+                  name="dnip7"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap7">
+                <input
+                  type="date"
+                  name="fechap7"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p8">
+            <p class="titulo">Participante 8</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep8">
+                <input
+                  type="text"
+                  name="nombrep8"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp8">
+                <input
+                  type="text"
+                  name="apellidosp8"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip8">
+                <input
+                  type="text"
+                  name="dnip8"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap8">
+                <input
+                  type="date"
+                  name="fechap8"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p9">
+            <p class="titulo">Participante 9</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep9">
+                <input
+                  type="text"
+                  name="nombrep9"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp9">
+                <input
+                  type="text"
+                  name="apellidosp9"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip9">
+                <input
+                  type="text"
+                  name="dnip9"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap9">
+                <input
+                  type="date"
+                  name="fechap9"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div id="p10">
+            <p class="titulo">Participante 10</p>
+            <div class="form_line">
+              <div class="form-group mb-3" id="nombrep10">
+                <input
+                  type="text"
+                  name="nombrep10"
+                  class="form-control"
+                  placeholder="Nombre"
+                  
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidosp10">
+                <input
+                  type="text"
+                  name="apellidosp10"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  
+                />
+              </div>
+            </div>
+            <div class="form_line">
+              <div class="form-group mb-3" id="dnip10">
+                <input
+                  type="text"
+                  name="dnip10"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  
+                />
+              </div>
+              <div class="icon me-1"><i class="fa fa-birthday-cake"></i></div>
+              <div class="form-group mb-3" id="fechap10">
+                <input
+                  type="date"
+                  name="fechap10"
+                  class="form-control"
+                  placeholder="Fecha"
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <p class="titulo">Prácticas consentidas</p>
+            <div class="form-group mb-3" id="adjuntar">
+              <div class="practicas p-3">
+              <div class="form-check">
+                <input class="form-check-input fs-6" type="checkbox" id="sexoral">
+                <label class="form-check-label" for="sexoral">
+                  Sexo oral
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input fs-6" type="checkbox" id="sexanal">
+                <label class="form-check-label" for="sexanal">
+                  Sexo anal
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input fs-6" type="checkbox" id="sexvaginal">
+                <label class="form-check-label" for="sexvaginal">
+                  Sexo vaginal
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input fs-6" type="checkbox" id="trio">
+                <label class="form-check-label" for="trio">
+                  Trio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input fs-6" type="checkbox" id="sexgroup">
+                <label class="form-check-label" for="sexgroup">
+                  Sexo en grupo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input fs-6" type="checkbox" id="sinlimites">
+                <label class="form-check-label" for="sinlimites">
+                  Sin límites
+                </label>
+              </div>
+              </div>
+              <div class="practicas p-3">
+                <div class="form-check">
+                  <input class="form-check-input fs-6" type="checkbox" id="tocamiento">
+                  <label class="form-check-label" for="tocamiento">
+                    Tocamientos
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input fs-6" type="checkbox" id="gangbang">
+                  <label class="form-check-label" for="gangbang">
+                    Gang Bang
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input fs-6" type="checkbox" id="bondage">
+                  <label class="form-check-label" for="bondage">
+                    Bondage
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input fs-6" type="checkbox" id="hardsex">
+                  <label class="form-check-label" for="hardsex">
+                    Hard Sex
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input fs-6" type="checkbox" id="voyeurismo">
+                  <label class="form-check-label" for="voyeurismo">
+                    Voyeurismo
+                  </label>
+                </div>
+              </div>
+              <p class="text-center"><small><em>* Marca sólo las consentidas</em></small></p>
+            </div>
+            <div class="m-3 form-check mb-4">
+              <input type="checkbox" class="form-check-input" required />
+              <label class="form-check-label" for="Check1"
+                >Acepto la
+                <a
+                  href="#"
+                  class="link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdropPrivacidad"
+                  >Política de Privacidad</a
+                ></label
+              >
+            </div>
+            <button type="submit" class="formbutton btn btn-outline-secondary mb-4">
+              Crear consentimiento
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--consentimiento-->
+    <div class="contenedor_consentimiento" id="contenedor">
+      <div id="cuerpos"> 
+        <h4 class="text-center pt-4">
+          CONSENTIMIENTO
+        </h4>
+        <br />
+        <div>
+          <p class="textgenerado">
+            El presente CONSENTIMIENTO se entrega para mantener relaciones sexuales
+            únicamente en los términos acordados las <span id="participantesgenerado"></span> personas relacionadas en el mismo, en 
+            <span id="lugareventogenerado"></span> de <span id="localidadeventogenerado"></span>
+            , el día <span id="fechaeventogenerado"></span> a partir de las <span id="horaeventogenerado"></span>
+             horas.<br><br>
+             
+            Se ACUERDA limitar las relaciones sexuales a las siguientes prácticas: <br>
+            <ul>
+              <li class="ms-4">Sexo oral: <span id="sexoralgenerado"></span></li>
+              <li class="ms-4">Sexo anal: <span id="sexanalgenerado"></span></li>
+              <li class="ms-4">Sexo vaginal: <span id="sexvaginalgenerado"></span></li>
+              <li class="ms-4">Trio: <span id="triogenerado"></span></li>
+              <li class="ms-4">Tocamientos: <span id="tocamientogenerado"></span></li>
+              <li class="ms-4">Sin límites: <span id="sinlimitesgenerado"></span></li>
+              <li class="ms-4">Sexo en grupo: <span id="sexgroupgenerado"></span></li>
+              <li class="ms-4">Gang Bang: <span id="gangbangenerado"></span></li>
+              <li class="ms-4">Bondage: <span id="bondagegenerado"></span></li>
+              <li class="ms-4">Hard Sex: <span id="hardsexgenerado"></span></li>
+              <li class="ms-4">Voyeurismo: <span id="voyeurismogenerado"></span></li>
+            </ul>
+            <p class="textgenerado"><em>*Cualquier modificación requerirá de un nuevo CONSENTIMIENTO.</em></p> 
+            <br>
+            <p class="textgenerado fs-5">Relación de participantes</p>
+            
+          </p>
+        </div>
+        <div id="p1generado">
+          <p class="textgenerado">Yo, 
+            <span id="nombrep1generado"></span><span> </span><span id="apellidosp1generado"></span>
+             con D.N.I. Nº <span id="dnip1generado"></span>, nacido/a el <span id="fechap1generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div>  
+        
+        <div id="p2generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep2generado"></span><span> </span><span id="apellidosp2generado"></span>
+             con D.N.I. Nº <span id="dnip2generado"></span>, nacido/a el <span id="fechap2generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        
+        <div id="p3generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep3generado"></span><span> </span><span id="apellidosp3generado"></span>
+             con D.N.I. Nº <span id="dnip3generado"></span>, nacido/a el <span id="fechap3generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        
+        <div id="p4generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep4generado"></span><span> </span><span id="apellidosp4generado"></span>
+             con D.N.I. Nº <span id="dnip4generado"></span>, nacido/a el <span id="fechap4generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        
+        <div id="p5generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep5generado"></span><span> </span><span id="apellidosp5generado"></span>
+             con D.N.I. Nº <span id="dnip5generado"></span>, nacido/a el <span id="fechap5generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        
+        <div id="p6generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep6generado"></span><span> </span><span id="apellidosp6generado"></span>
+             con D.N.I. Nº <span id="dnip6generado"></span>, nacido/a el <span id="fechap6generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        
+        <div id="p7generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep7generado"></span><span> </span><span id="apellidosp7generado"></span>
+             con D.N.I. Nº <span id="dnip7generado"></span>, nacido/a el <span id="fechap7generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div>
+        
+        <div id="p8generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep8generado"></span><span> </span><span id="apellidosp8generado"></span>
+             con D.N.I. Nº <span id="dnip8generado"></span>, nacido/a el <span id="fechap8generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div>  
+        
+        <div id="p9generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep9generado"></span><span> </span><span id="apellidosp9generado"></span>
+             con D.N.I. Nº <span id="dnip9generado"></span>, nacido/a el <span id="fechap9generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        
+        <div id="p10generado">
+          <br>
+          <p class="textgenerado">Yo, 
+            <span id="nombrep10generado"></span><span> </span><span id="apellidosp10generado"></span>
+             con D.N.I. Nº <span id="dnip10generado"></span>, nacido/a el <span id="fechap10generado"></span>
+             , en pleno uso de mis facultades mentales, sin que medie coacción alguna,
+             CONSIENTO en mantener relaciones sexuales en los términos acordados y con 
+             la/las personas que figuran en el presente CONSENTIMIENTO.
+          </p>
+        </div> 
+        <br /><br />
+      </div>
+        <button type="button" class="btn btn-outline-secondary" id="print">
+          Generar Pdf
+        </button>
+    </div>
+    <!-- Modal privacidad-->
+    <div
+      class="modal fade"
+      id="staticBackdropPrivacidad"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Política de privacidad
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>Aviso Legal</h5>
+            <br />
+            <h6>
+              Ley de los Servicios de la Sociedad de la Información (LSSI)
+            </h6>
+            <br />
+            <p>
+              SlowDesign, en adelante RESPONSABLE, pone a
+              disposición de los usuarios el presente documento, con el que
+              pretende dar cumplimiento a las obligaciones dispuestas en la Ley
+              34/2002, de 11 de julio, de Servicios de la Sociedad de la
+              Información y del Comercio Electrónico (LSSICE), así como informar
+              a todos los usuarios del sitio web respecto a cuáles son las
+              condiciones de uso.<br /><br />Toda persona que acceda a este
+              sitio web asume el papel de usuario, comprometiéndose a la
+              observancia y cumplimiento riguroso de las disposiciones aquí
+              dispuestas, así como a cualquier otra disposición legal que fuera
+              de aplicación. <br /><br />El responsable se reserva el derecho de
+              modificar cualquier tipo de información que pudiera aparecer en el
+              sitio web, sin que exista obligación de preavisar o poner en
+              conocimiento de los usuarios dichas obligaciones, entendiéndose
+              como suficiente con la publicación en el sitio web.
+            </p>
+            <br />
+            <h6>2. OBJETO</h6>
+            <br />
+            <p>
+              S3 es una web gratuita y sin ánimo de lucro, cuyo único
+              fin es facilitar a los usuarios la confección  por medio de un formulario de un CONSENTIMIENTO para 
+              mantener relaciones sexuales de manera segura y consentida.
+            </p>
+            <br />
+            <h6>3. PRIVACIDAD Y TRATAMIENTO DE DATOS</h6>
+            <br>
+            <p>
+              S3 no recaba ni almacena de ninguna forma datos personales 
+              de los usuarios ni de ningún tipo.
+              Cuando para el acceso a determinados contenidos o servicio sea
+              necesario facilitar datos de carácter personal, los Usuarios
+              garantizarán su veracidad, exactitud, autenticidad y vigencia. El
+              responsable dará a dichos datos el tratamiento automatizado que
+              corresponda en función de su naturaleza o finalidad, en los
+              términos indicados en la sección de Política de Privacidad.
+            </p>
+            <br />
+            <h6>4. PROPIEDAD INDUSTRIAL E INTELECTUAL</h6>
+            <br>
+            <p>
+              El Usuario reconoce y acepta que todos los contenidos que se
+              muestran en la web y en especial, diseños, textos,
+              imágenes, logos, iconos, botones, software, nombres comerciales,
+              marcas, o cualesquiera otros signos susceptibles de utilización
+              industrial y/o comercial están sujetos a derechos de Propiedad
+              Intelectual y todas las marcas, nombres comerciales o signos
+              distintivos, todos los derechos de propiedad industrial e
+              intelectual, sobre los contenidos y/o cualesquiera otros elementos
+              insertados en el página, que son propiedad exclusiva del RESPONSABLE
+              y quien tiene el derecho exclusivo de
+              utilizarlos. Por todo ello el Usuario se
+              compromete a no reproducir, copiar, distribuir, poner a
+              disposición o de cualquier otra forma comunicar públicamente,
+              transformar o modificar tales contenidos manteniendo indemne a la
+              empresa de cualquier reclamación que se derive del incumplimiento
+              de tales obligaciones. En ningún caso el acceso al Espacio Web
+              implica ningún tipo de renuncia, transmisión, licencia o cesión
+              total ni parcial de dichos derechos, salvo que se establezca
+              expresamente lo contrario. Las presentes Condiciones Generales de
+              Uso del Espacio Web no confieren a los Usuarios ningún otro
+              derecho de utilización, RRHH, alteración, explotación,
+              reproducción, distribución o comunicación pública del Espacio Web
+              y/o de sus Contenidos distintos de los aquí expresamente
+              previstos. Cualquier otro uso o explotación de cualesquiera
+              derechos estará sujeto a la previa y expresa autorización
+              específicamente otorgada a tal efecto por el RESPONSABLE. <br /><br />
+              Los contenidos,
+              textos, fotografías, diseños, logotipos, imágenes, programas de
+              ordenador, códigos fuente y, en general, cualquier creación
+              intelectual existente en este Espacio, así como el propio Espacio
+              en su conjunto, como obra artística multimedia, están protegidos
+              como derechos de autor por la legislación en materia de propiedad
+              intelectual. La empresa es titular de los elementos que integran
+              el diseño gráfico del Espacio Web, lo menús, botones de
+              navegación, el código HTML, los textos, imágenes, texturas,
+              gráficos y cualquier otro contenido del Espacio Web o, en
+              cualquier caso dispone de la correspondiente autorización para la
+              utilización de dichos elementos. El contenido dispuesto en el
+              Espacio Web no podrá ser reproducido ni en todo ni en parte, ni
+              transmitido, ni registrado por ningún sistema de recuperación de
+              información, en ninguna forma ni en ningún medio, a menos que se
+              cuente con la autorización previa, por escrito, de la citada
+              Entidad. <br /><br />Asimismo queda prohibido suprimir, eludir y/o
+              manipular el «copyright» así como los dispositivos técnicos de
+              protección, o cualesquiera mecanismos de información que pudieren
+              contener los contenidos. El Usuario de este Espacio Web se
+              compromete a respetar los derechos enunciados y a evitar cualquier
+              actuación que pudiera perjudicarlos, reservándose en todo caso la
+              empresa el ejercicio de cuantos medios o acciones legales le
+              correspondan en defensa de sus legítimos derechos de propiedad
+              intelectual e industrial.
+            </p>
+            <br />
+            <h6>
+              5. OBLIGACIONES Y RESPONSABILIDADES DEL USUARIO DEL ESPACIO WEB
+            </h6>
+            <br>
+            <p>
+              El Usuario se compromete a: <br />
+              <ol>
+                <li>Hacer un uso adecuado y lícito del Espacio Web así como de los contenidos y servicios, 
+                  de  conformidad con: 
+                  <ul>
+                    <li>la legislación aplicable en cada momento.</li>
+                    <li>las Condiciones Generales de Uso del Espacio Web</li>
+                    <li>la moral y buenas costumbres generalmente aceptadas</li>
+                    <li>el orden público</li>
+                  </ul>
+                </li>
+                <li>Proveerse de todos los medios y requerimientos técnicos que se precisen para acceder al Espacio Web.</li>
+                <li>Facilitar información veraz al cumplimentar con sus datos de carácter personal los 
+                  formularios contenidos en el Espacio Web y a mantenerlos actualizados en todo momento de 
+                  forma que responda, en cada momento, a la situación real del Usuario. 
+                  El Usuario será el único responsable de las manifestaciones falsas o inexactas que realice 
+                  y de los perjuicios que cause por la información que facilite.</li>
+              </ol>
+              No obstante lo establecido en el apartado anterior el Usuario deberá asimismo abstenerse de: <br><br>
+              <ol>
+                <li>Hacer un uso no autorizado o fraudulento del Espacio Web y/o de los contenidos con fines o 
+                  efectos ilícitos, prohibidos en las presentes Condiciones Generales de Uso, lesivos de los 
+                  derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, 
+                  sobrecargar, deteriorar o impedir la normal utilización de los servicios o los documentos, 
+                  archivos y toda clase de contenidos almacenados en cualquier equipo informático.</li>
+                <li>Acceder o intentar acceder a recursos o áreas restringidas del Espacio Web, sin cumplir las condiciones 
+                  exigidas para dicho acceso.</li>
+                <li>Provocar daños en los sistemas físicos o lógicos del Espacio Web, de sus proveedores o de terceros.</li>
+                <li>Introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos 
+                  o lógicos que sean susceptibles de provocar daños en los sistemas físicos o lógicos del 
+                  responsable, proveedores o de terceros.</li>
+                <li>Intentar acceder, utilizar y/o manipular los datos de la empresa, terceros proveedores y otros Usuarios.</li>
+                <li>Reproducir o copiar, distribuir, permitir el acceso del público a través de cualquier 
+                  modalidad de comunicación pública, transformar o modificar los contenidos, a menos que se 
+                  cuente con la autorización del titular de los correspondientes derechos o ello resulte 
+                  legalmente permitido.</li>
+                <li>Suprimir, ocultar o manipular las notas sobre derechos de propiedad intelectual o 
+                  industrial y demás datos identificativos de los derechos de la empresa o de terceros 
+                  incorporados a los contenidos, así como los dispositivos técnicos de protección o 
+                  cualesquiera mecanismos de información que puedan insertarse en los contenidos.</li>
+                <li>Obtener e intentar obtener los contenidos empleando para ello medios o procedimientos 
+                  distintos de los que, según los casos, se hayan puesto a su disposición a este efecto o se 
+                  hayan indicado expresamente en las páginas web donde se encuentren los contenidos o, en 
+                  general, de los que se empleen habitualmente en Internet por no entrañar un riesgo de daño 
+                  o inutilización del Espacio web y/o de los contenidos.</li>
+                <li>En particular, y a título meramente indicativo y no exhaustivo, el Usuario se compromete 
+                  a no transmitir, difundir o poner a disposición de terceros informaciones, datos, 
+                  contenidos, mensajes, gráficos, dibujos, archivos de sonido y/o imagen, fotografías, 
+                  grabaciones, software y, en general, cualquier clase de material que:
+                  <ul>
+                    <li>De cualquier forma sea contrario, menosprecie o atente contra los derechos fundamentales y las 
+                      libertades públicas reconocidas constitucionalmente, en los Tratados Internacionales y 
+                      en el resto de la legislación vigente.</li>
+                    <li>Induzca, incite o promueva actuaciones delictivas, 
+                      denigratorias, difamatorias, violentas o, en general, contrarias a la ley, a la moral, a 
+                      las buenas costumbres generalmente aceptadas o al orden público.</li>
+                    <li>Induzca, incite o 
+                      promueva actuaciones, actitudes o pensamientos discriminatorios por razón de sexo, raza, 
+                      religión, creencias, edad o condición.</li>
+                    <li>Incorpore, ponga a disposición o permita acceder 
+                      a productos, elementos, mensajes y/o servicios delictivos, violentos, ofensivos, nocivos, 
+                      degradantes o, en general, contrarios a la ley, a la moral y a las buenas costumbres 
+                      generalmente aceptadas o al orden público. Induzca o pueda inducir a un estado inaceptable 
+                      de ansiedad o temor.</li>
+                    <li>Induzca o incite a involucrarse en prácticas peligrosas, de riesgo o 
+                      nocivas para la salud y el equilibrio psíquico.</li>
+                    <li>Se encuentra protegido por la legislación 
+                      en materia de protección intelectual o industrial perteneciente al RESPONSABLE 
+                      sin que haya sido autorizado el uso que se pretenda realizar.</li>
+                    <li>Sea contrario al honor, a la 
+                      intimidad personal y familiar o a la propia imagen de las personas.• Constituya cualquier 
+                      tipo de publicidad.</li>
+                    <li>Incluya cualquier tipo de virus o programa que impida el normal 
+                      funcionamiento del Espacio Web.</li>  
+                  </ul>  
+                </li>
+              </ol>
+            </p>
+            <br />
+            <h6>6. RESPONSABILIDADES</h6>
+            <br>
+            <p>
+              No se garantiza el acceso continuado, ni la correcta visualización, descarga o utilidad  de 
+              los elementos e informaciones contenidas en la web que puedan verse impedidos, dificultados 
+              o interrumpidos por factores o circunstancias que están fuera de su control. No se hace 
+              responsable de las decisiones que pudieran adoptarse como consecuencia del acceso a los 
+              contenidos o informaciones ofrecidas. <br><br>
+              Se podrá interrumpir el servicio, o resolver de modo inmediato la relación con el Usuario, 
+              si se detecta que un uso de su Espacio Web, o de cualquiera de los servicios ofertados en el 
+              mismo, es contrario a las presentes Condiciones Generales de Uso. No nos hacemos responsables 
+              por daños, perjuicios, pérdidas, reclamaciones o gastos derivados del uso del Espacio Web. <br><br>
+              El responsable excluye cualquier responsabilidad por los daños y perjuicios de toda naturaleza que 
+              pudieran deberse a la mala utilización de los servicios de libre disposición y uso por parte de 
+              los Usuarios de Espacio Web. Asimismo queda exonerado de cualquier responsabilidad por el 
+              contenido e informaciones que puedan ser recibidas como consecuencia de los formularios de 
+              recogida de datos, estando los mismos únicamente para la prestación de los servicios de 
+              consultas y dudas. Por otro lado, en caso de causar daños y perjuicios por un uso ilícito o 
+              incorrecto de dichos servicios, podrá ser el Usuario reclamado por los daños o perjuicios 
+              causados. <br><br>
+              Usted mantendrá al RESPONSABLE indemne frente a cualesquiera daños y perjuicios que se deriven 
+              de reclamaciones, acciones o demandas de terceros como consecuencia de su acceso o uso del 
+              Espacio Web. Asimismo, usted se obliga a indemnizar frente a cualesquiera daños y perjuicios, 
+              que se deriven del uso por su parte de “robots”, “spiders”, “crawlers” o herramientas similares 
+              empleadas con el fin de recabar o extraer datos o de cualquier otra actuación por su parte que 
+              imponga una carga irrazonable sobre el funcionamiento del Espacio Web.
+            </p>
+            <br />
+            <h6>7. PROTECCIÓN DE DATOS</h6>
+            <br>
+            <p>
+              Si para utilizar algunos de los Servicios, el Usuario debe proporcionar previamente ciertos 
+              datos de carácter personal el RESPONSABLE tratará automatizadamente estos datos y aplicará las 
+              correspondientes medidas de seguridad, todo ello en cumplimiento del RGPD, LOPDGDD y LSSI. 
+              El Usuario puede acceder a la política seguida en el tratamiento de los datos personales, así 
+              como el establecimiento de las finalidades previamente establecidas, en las condiciones 
+              definidas en la Política de Privacidad.
+            </p>
+            <br />
+            <h6>8. COOKIES</h6>
+            <br>
+            <p>
+              La web no almacena ni guarda ningún dato de caracter personal.
+            </p>
+            <br />
+            <h6>9. DECLARACIONES Y GARANTÍAS</h6>
+            <br>
+            <p>
+              En general, los contenidos y servicios ofrecidos en el Espacio Web tienen carácter meramente 
+              informativo. Por consiguiente, al ofrecerlos, no se otorga garantía ni declaración alguna en 
+              relación con los contenidos y servicios ofrecidos en el Espacio web, incluyendo, a título 
+              enunciativo, garantías de licitud, fiabilidad, utilidad, veracidad, exactitud, o 
+              comerciabilidad, salvo en la medida en que por ley no puedan excluirse tales declaraciones y 
+              garantías.
+            </p>
+            <br />
+            <h6>10. FUERZA MAYOR</h6>
+            <br>
+            <p>
+             El responsable no será responsable en todo en caso de imposibilidad de prestar servicio, si 
+             ésta se debe a interrupciones prolongadas del suministro eléctrico, líneas de telecomunicaciones, 
+             conflictos sociales, huelgas, rebelión, explosiones, inundaciones, actos y omisiones del Gobierno, 
+             y en general todos los supuestos de fuerza mayor o de caso fortuito.
+            </p>
+            <br /><br>
+            <p>Actualizado agosto de 2022</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Lo he leido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--scripts-->
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b5d48cdcc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
